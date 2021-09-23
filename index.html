@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custon.css">
+
+    <title>Stock App</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Stock App</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#stock-levels">Stok levels</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#add-stock">Add</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#remove-stock">Remove</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Stock Levels -->
+      <section id="stock-levels">
+        <div class="container mt-3">
+          <h2>Stock Levels</h2>
+
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Product 01</div>
+                <span id="prd1_avrg" style="color: gray; font-size: small;">400.89</span>
+              </div>
+              <span id="prd1" class="badge badge-primary badge-pill"></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Product 02</div>
+                <span id="prd2_avrg" style="color: gray; font-size: small;">78.83</span>
+              </div>
+              <span id="prd2" class="badge badge-primary badge-pill"></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Product 03</div>
+                <span id="prd3_avrg" style="color: gray; font-size: small;">56.03</span>
+              </div>
+              <span id="prd3" class="badge badge-primary badge-pill"></span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Add Stock -->
+      <section id="add-stock">
+        <div class="container mt-3">
+          
+          <div style="background-color: rgb(240, 239, 239); padding: 35px; border-radius: 5px;">
+            <h2>Add Stock</h2>
+            <div class="form-group">
+              <label for="products">Select a product code</label>
+              <select class="form-control" id="products">
+                <option>Product 01</option>
+                <option>Product 02</option>
+                <option>Product 03</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="item-num">Items Recieved</label>
+              <input type="number" class="form-control" id="item-num" name="item-num">
+            </div>
+
+            <div class="form-group">
+              <label for="item-num">Price per Item Recieved</label>
+              <input type="number" class="form-control" id="price-per-item" name="price-item">
+            </div>
+
+            <button class="btn btn-primary btn-lg btn-block" onclick="addStock()">Add Stock</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Remove Stock -->
+      <section id="remove-stock">
+        <div class="container mt-3">
+          
+          <div style="background-color: rgb(240, 239, 239); padding: 35px; border-radius: 5px;" action="#">
+            <h2>Remove Stock</h2>
+            <div class="form-group">
+              <label for="products">Select a product code</label>
+              <select class="form-control" id="products">
+                <option>Product 01</option>
+                <option>Product 02</option>
+                <option>Product 03</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Buyer email address</label>
+              <input type="email" class="form-control" id="email" placeholder="test@test.com" name="item-num">
+            </div>
+
+            <div class="form-group">
+              <label for="item-bought">Items Bought</label>
+              <input type="number" class="form-control" id="item-bought" name="item-bought">
+            </div>
+
+            <button onclick="removeStock()" class="btn btn-dark btn-lg btn-block">Item Shipped</button>
+          </div>
+        </div>
+      </section>
+
+    
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

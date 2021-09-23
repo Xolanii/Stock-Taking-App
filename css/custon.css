@@ -1,0 +1,18 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#stock-levels {
+    padding-top: 180px;
+    padding-bottom: 380px;
+}
+
+#add-stock {
+    padding-top: 180px;
+    padding-bottom: 380px;
+}
+
+#remove-stock {
+    padding-top: 180px;
+    padding-bottom: 380px;
+}
