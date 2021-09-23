@@ -32,6 +32,7 @@ function addStock() {
 
         //Display Average stock price
         _("prd1_avrg").innerHTML = parseFloat((prd1 * price) / prd1).toFixed(2);
+        alert("Product 01 updated");
 
     }
 
@@ -44,6 +45,7 @@ function addStock() {
 
         //Display Average stock price
         _("prd2_avrg").innerHTML = parseFloat((prd2 * price) / prd2).toFixed(2);
+        alert("Product 02 updated");
     }
 
     if(product == "Product 03") {
@@ -54,7 +56,8 @@ function addStock() {
         _("prd3").innerHTML = prd3;
 
         //Display Average stock price
-        _("prd3_avrg").innerHTML = parseFloat((prd3 * price) / prd3).toFixed(2);        
+        _("prd3_avrg").innerHTML = parseFloat((prd3 * price) / prd3).toFixed(2);  
+        alert("Product 03 updated");
     }
 
 
@@ -67,12 +70,10 @@ function removeStock() {
 
     console.log(none);
     for(var i = 0; i < emails.length; i++) {
-        console.log(none);
         if(email == emails[i]) {
             alert("Email already exists try another one");
         } else {
             none = true;
-            console.log(none);
         }
     }
 
@@ -88,6 +89,7 @@ function removeStock() {
 
         //Calculate average
         _("prd1_avrg").innerHTML = parseFloat((parseInt(_("prd1_avrg").textContent) * prd1) / prd1).toFixed(2);
+        alert("Product 01 removed");
 
     }
 
@@ -103,6 +105,7 @@ function removeStock() {
 
         //Calculate average
         _("prd2_avrg").innerHTML = parseFloat((parseInt(_("prd2_avrg").textContent) * prd2 / prd2)).toFixed(2);
+        alert("Product 02 removed");
 
     }
 
@@ -118,6 +121,7 @@ function removeStock() {
 
         //Calculate average
         _("prd3_avrg").innerHTML = parseFloat((parseInt(_("prd3_avrg").textContent) * prd3) / prd3).toFixed(2);
+        alert("Product 03 removed");
 
     }
 
